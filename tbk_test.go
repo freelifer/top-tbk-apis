@@ -20,10 +20,11 @@ func Test_taobao_tbk_dg_item_coupon_get(t *testing.T) {
 	request.InitDefaultValue("http://gw.api.taobao.com/router/rest", "24659164", "cbe2b136be37cd2b66fd4490b8fbfb94")
 	request.SetAdzoneId("148758292")
 	request.SetPlatform("2")
-	_, data, err := request.Response()
+	resp, _, err := request.Response()
 
-	t.Log(string(data))
+	// t.Log(string(data))
 	if err != nil {
 		t.Error(err)
 	}
+	t.Log(resp.Results)
 }

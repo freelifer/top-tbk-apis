@@ -106,26 +106,26 @@ type MapData struct {
 
 /* TbkCoupon */
 type TbkCoupon struct {
-	Category          int      `json:"category"`            // 后台一级类目
-	CommissionRate    string   `json:"commission_rate"`     // 佣金比率(%)
-	CouponClickUrl    string   `json:"coupon_click_url"`    // 商品优惠券推广链接
-	CouponEndTime     string   `json:"coupon_end_time"`     // 优惠券结束时间
-	CouponInfo        string   `json:"coupon_info"`         // 优惠券面额
-	CouponRemainCount int      `json:"coupon_remain_count"` // 优惠券剩余量
-	CouponStartTime   string   `json:"coupon_start_time"`   // 优惠券开始时间
-	CouponTotalCount  int      `json:"coupon_total_count"`  // 优惠券总量
-	ItemDescription   string   `json:"item_description"`    // 宝贝描述（推荐理由）
-	ItemUrl           string   `json:"item_url"`            // 商品详情页链接地址
-	Nick              string   `json:"nick"`                // 卖家昵称
-	NumIid            int      `json:"num_iid"`             // itemId
-	PictUrl           string   `json:"pict_url"`            // 商品主图
-	SellerId          int      `json:"seller_id"`           // 卖家id
-	ShopTitle         string   `json:"shop_title"`          // 店铺名称
-	SmallImages       []string `json:"small_images"`        // 商品小图列表
-	Title             string   `json:"title"`               // 商品标题
-	UserType          int      `json:"user_type"`           // 卖家类型，0表示集市，1表示商城
-	Volume            int      `json:"volume"`              // 30天销量
-	ZkFinalPrice      string   `json:"zk_final_price"`      // 折扣价
+	Category          int     `json:"category"`            // 后台一级类目
+	CommissionRate    string  `json:"commission_rate"`     // 佣金比率(%)
+	CouponClickUrl    string  `json:"coupon_click_url"`    // 商品优惠券推广链接
+	CouponEndTime     string  `json:"coupon_end_time"`     // 优惠券结束时间
+	CouponInfo        string  `json:"coupon_info"`         // 优惠券面额
+	CouponRemainCount int     `json:"coupon_remain_count"` // 优惠券剩余量
+	CouponStartTime   string  `json:"coupon_start_time"`   // 优惠券开始时间
+	CouponTotalCount  int     `json:"coupon_total_count"`  // 优惠券总量
+	ItemDescription   string  `json:"item_description"`    // 宝贝描述（推荐理由）
+	ItemUrl           string  `json:"item_url"`            // 商品详情页链接地址
+	Nick              string  `json:"nick"`                // 卖家昵称
+	NumIid            int64   `json:"num_iid"`             // itemId
+	PictUrl           string  `json:"pict_url"`            // 商品主图
+	SellerId          int64   `json:"seller_id"`           // 卖家id
+	ShopTitle         string  `json:"shop_title"`          // 店铺名称
+	SmallImages       Strings `json:"small_images"`        // 商品小图列表
+	Title             string  `json:"title"`               // 商品标题
+	UserType          int     `json:"user_type"`           // 卖家类型，0表示集市，1表示商城
+	Volume            int     `json:"volume"`              // 30天销量
+	ZkFinalPrice      string  `json:"zk_final_price"`      // 折扣价
 
 }
 
@@ -143,4 +143,8 @@ type Results struct {
 	TotalAmount  int    `json:"total_amount"`   // 总库存
 	ZkFinalPrice string `json:"zk_final_price"` // 淘抢购活动价
 
+}
+
+type Strings struct {
+	StringArray []string `json:"string"`
 }

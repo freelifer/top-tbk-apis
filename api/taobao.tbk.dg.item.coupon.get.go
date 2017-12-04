@@ -48,9 +48,13 @@ func (r *TbkDgItemCouponGetRequest) Response() (*TbkDgItemCouponGetResponse, []b
 	return resp.Response, data, err
 }
 
+type TbkDgItemCouponGetResult struct {
+	TbkCoupons []*TbkCoupon `json:"tbk_coupon"`
+}
+
 type TbkDgItemCouponGetResponse struct {
-	Results      []*TbkCoupon `json:"results"`
-	TotalResults int          `json:"total_results"`
+	Results      *TbkDgItemCouponGetResult `json:"results"`
+	TotalResults int                       `json:"total_results"`
 }
 
 type TbkDgItemCouponGetResponseResult struct {
